@@ -65,15 +65,19 @@ if __name__ == '__main__':
     #print(lista_compra_productos)
 
     #Metodo tradicional
-    lista_compra_productos = []
+    '''lista_compra_productos = []
 
     for codigo in lista_compra_id:
         for k,v in producto.items():
             if codigo == k:
-                codigo = v
-                lista_compra_productos.append(codigo)         
+                if v not in lista_compra_productos:
+                    lista_compra_productos.append(v)    
+    
+    print('Productos:', lista_compra_productos)'''
+
+    #Metodo compresion de listas
+    lista_compra_productos = [producto.get(i, 'NaN') for i in lista_compra_id]
     
     print(lista_compra_productos)
-
-
+    
     print("terminamos")

@@ -49,16 +49,16 @@ if __name__ == '__main__':
     # ['Tamara', 'Juan', 'Alberto'......]
     
     #Metodo tradicional
-    nombres_filtrados = []
+    '''nombres_filtrados = []
     for i in range(len(nombres)):
         nombre = nombres[i]
-        for j in range(len(padron)):
-            if nombre[0] == padron[j]:
-                nombres_filtrados.append(nombre)
+        if nombre[0] in padron:
+            nombres_filtrados.append(nombre)
 
-    print(nombres_filtrados)       
+    print(nombres_filtrados)  '''     
                  
     #Metodo compresion de listas
+    nombres_filtrados = [nombre for nombre in nombres if (nombre[0] in padron)]
+    print('Lista de nombres:',nombres_filtrados)
     
-
     print("terminamos")
