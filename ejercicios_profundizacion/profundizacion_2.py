@@ -30,6 +30,9 @@ es preferible que arranque utilizando los métodos tradicionales
 de bucle/condicionales y luego intentarlo con comprension de listas
 '''
 
+import numpy as np
+
+
 if __name__ == '__main__':
     print('Comenzamos a ponernos serios!')
 
@@ -44,5 +47,18 @@ if __name__ == '__main__':
 
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
+    
+    #Metodo tradicional
+    nombres_filtrados = []
+    for i in range(len(nombres)):
+        nombre = nombres[i]
+        for j in range(len(padron)):
+            if nombre[0] == padron[j]:
+                nombres_filtrados.append(nombre)
+
+    print(nombres_filtrados)       
+                 
+    #Metodo compresion de listas
+    
 
     print("terminamos")
